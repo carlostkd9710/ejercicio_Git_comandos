@@ -1,5 +1,5 @@
-let nombrePlanetas = ['Tierra', 'Marte']
-let distancia = [5, 3, '67']
+let nombrePlanetas = ['Tierra', 'Marte', 'jupiter']
+let distancia = [5, 2,9, '67']
 const tamanio = []
 
 console.log(nombrePlanetas);
@@ -29,3 +29,24 @@ for(const key in distancia){
         console.log("No se ecnontro la distancia")
     }
 }
+
+console.log('foreach')
+
+nombrePlanetas.forEach((value, index,array) => {
+    console.log('planeta',index,value)
+});
+
+console.log('MAP')
+
+nombrePlanetas.map((planetas,index)=>{
+    return(
+        console.log(`Èl planeta ${planetas} tiene el tamaño de: ${tamanio[index]}`)
+    )
+})
+
+console.log('MapEnVariable')
+
+let resultadoMap = nombrePlanetas.map((planetas,index)=>{
+    return(`Èl planeta ${planetas} tiene el tamaño de: ${tamanio[index]}`)
+})
+console.log(resultadoMap)
